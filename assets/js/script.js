@@ -358,7 +358,7 @@ createApp
             this.currentChat.splice(0,1)
             this.contacts[index].visible = !this.contacts[index].visible;
             //console.log(this.contacts[index].visible);
-            this.currentChat.push(this.contacts[index])
+            this.currentChat.push(this.contacts[index]);
             //console.log(this.contacts[index]);
             //console.log(this.currentChat);
             //console.log(this.currentChat[0].name);
@@ -367,7 +367,7 @@ createApp
         sendMessage()
         {
             //console.log(this.currentChatMessages);
-            this.currentChatMessages.push(this.currentMessage)
+            this.currentChatMessages.push(this.currentMessage);
             this.currentMessage = "";
             //console.log(this.currentChat);
             //this.currentChat.push(message="ok")
@@ -382,7 +382,7 @@ createApp
                     }
                 ]
             }
-            this.currentChat.push(messageOk)
+            this.currentChat.push(messageOk);
             console.log(this.currentChat);
             //console.log();
         },
@@ -399,7 +399,18 @@ createApp
     {
         //console.log(this.contacts[0].messages[0].message);
         //console.log(this.currentChat);
-        console.log(this.filteredListName);
+        //console.log(this.filteredListName);
         
+    },
+    update()
+    {
+        console.log(this.currentChatMessages);
+        console.log(this.currentChat);
+        console.log(this.contacts.messages);
+
+
     }
 }).mount("#app");
+
+var DateTime = luxon.DateTime;
+

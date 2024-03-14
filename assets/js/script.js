@@ -359,9 +359,9 @@ createApp
             //this.currentChat.splice(0,1)
             //this.contacts[index].visible = !this.contacts[index].visible;
             //console.log(this.contacts[index].visible);
-            console.log(this.contacts[index]);
+            //console.log(this.contacts[index]);
             this.currentChat = this.contacts[index]
-            console.log(this.currentChat);
+            //console.log(this.currentChat);
             //console.log(this.contacts[index]);
             //console.log(this.currentChat);
             //console.log(this.currentChat[0].name);
@@ -372,23 +372,26 @@ createApp
         {
             //console.log(this.currentChatMessages);
             //this.currentChatMessages.push(this.currentMessage);
-            //this.currentMessage = "";
+            let newMessage = 
+            {
+                date: '10/01/2020 15:51:00',
+                message: this.currentMessage,
+                status: 'sent' 
+            }
+            console.log(newMessage);
+            this.currentChat.messages.push(newMessage)
+            this.currentMessage = "";
             //console.log(this.currentChat);
             //this.currentChat.push(message="ok")
-            /* let messageOk =
+            let messageOk =
             {
-                messages:
-                [
-                    {
-                        date: '10/01/2020 15:51:00',
-                        message: 'OK!!',
-                        status: 'received'  
-                    }
-                ]
+                date: '10/01/2020 15:51:00',
+                message: 'Ok..',
+                status: 'received'  
             }
-            this.currentChat.push(messageOk);
-            console.log(this.currentChat); */
-            //console.log();
+            this.currentChat.messages.push(messageOk);
+            console.log(messageOk);
+            console.log(this.currentChat);
         },
         filteredList()
         {

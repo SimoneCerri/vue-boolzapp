@@ -383,15 +383,12 @@ createApp
             this.currentMessage = "";
             //console.log(this.currentChat);
             //this.currentChat.push(message="ok")
-            let autoMessageOk =
-            {
-                date: '10/01/2020 15:51:00',
-                message: 'Ok..',
-                status: 'received'  
-            }
-            this.currentChat.messages.push(autoMessageOk);
-            console.log(autoMessageOk);
-            console.log(this.currentChat);
+            
+            this.interval = setInterval(this.autoMessage,1500)
+            //clearInterval(this.interval)
+
+            //console.log(autoMessageOk);
+            //console.log(this.currentChat);
         },
         filteredList()
         {
@@ -400,13 +397,24 @@ createApp
             return myContact.filter((object) =>
                 object.name.toLowerCase().includes(search.value.toLowerCase())
             );
+        },
+        autoMessage()
+        {
+            let autoMessageOk =
+            {
+                date: '10/01/2020 15:51:00',
+                message: 'Ok..',
+                status: 'received'
+            }
+            this.currentChat.messages.push(autoMessageOk);
         }
     },
     mounted()
     {
         //console.log(this.contacts[0].messages[0].message);
-        console.log(this.currentChat);
+        //console.log(this.currentChat);
         //console.log(this.filteredListName);
+        //clearInterval(this.interval)
         
     },
     update()
@@ -414,7 +422,8 @@ createApp
         //console.log(this.currentChatMessages);
         //console.log(this.currentChat);
         //console.log(this.contacts.messages);
-        console.log(currentChat);
+        //console.log(currentChat);
+        clearInterval(this.interval)
 
 
     }

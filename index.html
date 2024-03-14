@@ -150,10 +150,10 @@
 
                 <div class="chat_main dflex">
                     <div class="current_chat" v-for="currentObj in currentChat">
-                        <div class="dflex spacing" v-for="message in currentObj.messages" :class="message.status === sent ? 'mine_message' : 'enemy_message'">
+                        <div class="dflex spacing" v-for="singleMessage in currentObj.messages" :class="(singleMessage.status) === sent ? 'mine_message' : 'enemy_message'">
                             <div class="text">
                                 <p>
-                                    {{message.message}}
+                                    {{singleMessage.message}}
                                 </p>
                             </div>
                             <div class="text_info dflex">
@@ -179,7 +179,7 @@
                                 </div>
                                 <!-- /.check -->
                                 <div class="msg_hours">
-                                    {{message.date}}
+                                    {{singleMessage.date}}
                                 </div>
                                 <!-- /.msg_hours -->
                             </div>

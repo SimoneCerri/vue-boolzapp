@@ -116,13 +116,13 @@
 
             <div class="chat col_8 col_11_m col_12_s">
                 <div class="chat_header dflex">
-                    <div class="chat_img dflex" v-for="currentObj in currentChat">
-                        <img :src="currentObj.avatar" alt="">
+                    <div class="chat_img dflex">
+                        <img v-if="" :src="" alt="">
 
                         <div class="chat_info">
                             <h4>
                                 <strong>
-                                    {{currentObj.name}}
+                                    <!-- {{currentObj.name}} -->
                                 </strong>
                             </h4>
                             <span>
@@ -149,9 +149,9 @@
                 <!-- /.chat_header -->
 
                 <div class="chat_main dflex">
-                    <div class="current_chat" v-for="currentObj in currentChat">
-                        <div class="dflex spacing" v-for="singleMessage in currentObj.messages" :class="singleMessage.status === sent ? 'mine_message' : 'enemy_message'">
-                            <div class="text">
+                    <div class="current_chat">
+                        <div class="dflex spacing" v-for="singleMessage in currentChat.messages" :class="singleMessage.status === 'sent' ? 'enemy_message' : 'mine_message'">
+                            <div class="text" >
                                 <p>
                                     {{singleMessage.message}}
                                 </p>
@@ -185,10 +185,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="current_chat_my_messages" v-for="message in currentChatMessages">
+                    <div class="current_chat_my_messages" v-for="">
                         <div class="mine_message dflex spacing">
                             <div class="text">
-                                {{message}}
+                                
                             </div>
                             <div class="text_info dflex">
                                 <div class="check">

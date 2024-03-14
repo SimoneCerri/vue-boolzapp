@@ -25,8 +25,9 @@
                     <div class="row">
                         <div class="col">
                             <div class="mine_contact dflex">
-                                <div class="mine_contact_img">
-                                    <img src="./assets/img/avatar_io.jpg" alt="">
+                                <div class="mine_contact_img dflex align_center">
+                                    <img :src="myContact.avatar" alt="">
+                                    <span>{{myContact.name}}</span>
                                 </div>
                                 <div class="mine_contact_info">
                                     <span>
@@ -77,15 +78,15 @@
 
                 <!-- /.row -->
                 <div class="row all_enemy_are_the_same">
-                    <div class="col">
+                    <div class="col" v-for="contact in contacts">
                         <div class="contact dflex">
                             <div class="contact_img dflex">
-                                <img src="./assets/img/avatar_1.jpg" alt="">
+                                <img :src="contact.avatar" alt="">
 
                                 <div class="contact_info">
                                     <h4>
                                         <strong>
-                                            Michele
+                                            {{contact.name}}
                                         </strong>
                                     </h4>
                                     <span>

@@ -118,6 +118,11 @@ img {
     display: flex;
 }
 
+.align_center
+{
+    align-items: center;
+}
+
 .spacing {
     justify-content: space-between;
 }

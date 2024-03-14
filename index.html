@@ -149,8 +149,8 @@
 
                 <div class="chat_main dflex">
                     <div class="current_chat" v-for="currentObj in currentChat">
-                        <div class="enemy_message dflex spacing" v-for="message in currentObj.messages">
-                            <div class="text">
+                        <div class="dflex spacing" v-for="message in currentObj.messages">
+                            <div class="text" :class="message.status === sent ? 'enemy_message' : 'mine_message'">
                                 <p>
                                     {{message.message}}
                                 </p>

@@ -149,7 +149,7 @@
                         <div class="enemy_message dflex spacing" v-for="message in currentObj.messages">
                             <div class="text">
                                 <p>
-                                  {{message.message}}  
+                                    {{message.message}}
                                 </p>
                             </div>
                             <div class="text_info dflex">
@@ -182,11 +182,40 @@
                         </div>
                     </div>
                     <div class="current_chat_my_messages" v-for="message in currentChatMessages">
-                        <div>
-                            {{message}}
+                        <div class="mine_message dflex spacing">
+                            <div class="text">
+                                {{message}}
+                            </div>
+                            <div class="text_info dflex">
+                                <div class="check">
+                                    <i class="fa-solid fa-gear"></i>
+                                    <ul class="secret_option">
+                                        <li>
+                                            <a href="#">
+                                                Cancella messaggio
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Rimuovi dalla tua vita
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                "Fai come ti pare" cit.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.check -->
+                                <div class="msg_hours">
+                                    03:40
+                                </div>
+                                <!-- /.msg_hours -->
+                            </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <!-- /.chat_main -->
                 <div class="chat_footer dflex">
@@ -195,7 +224,8 @@
                     </div>
                     <!-- /.emote -->
                     <div class="type_here">
-                        <input class="type_msg" type="search" name="" placeholder="Scrivi un messaggio" id="" v-model.trim="currentMessage" @keyup.enter="sendMessage()">
+                        <input class="type_msg" type="search" name="" placeholder="Scrivi un messaggio" id=""
+                            v-model.trim="currentMessage" @keyup.enter="sendMessage()">
                     </div>
                     <!-- /.type_here -->
                     <div class="microphone">

@@ -117,12 +117,12 @@
             <div class="chat col_8 col_11_m col_12_s">
                 <div class="chat_header dflex">
                     <div class="chat_img dflex">
-                        <img v-if="" :src="" alt="">
+                        <img v-if="" :src="currentChat.avatar" alt="">
 
                         <div class="chat_info">
                             <h4>
                                 <strong>
-                                    <!-- {{currentObj.name}} -->
+                                    {{currentChat.name}}
                                 </strong>
                             </h4>
                             <span>

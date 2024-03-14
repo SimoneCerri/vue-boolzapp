@@ -383,14 +383,14 @@ createApp
             this.currentMessage = "";
             //console.log(this.currentChat);
             //this.currentChat.push(message="ok")
-            let messageOk =
+            let autoMessageOk =
             {
                 date: '10/01/2020 15:51:00',
                 message: 'Ok..',
                 status: 'received'  
             }
-            this.currentChat.messages.push(messageOk);
-            console.log(messageOk);
+            this.currentChat.messages.push(autoMessageOk);
+            console.log(autoMessageOk);
             console.log(this.currentChat);
         },
         filteredList()

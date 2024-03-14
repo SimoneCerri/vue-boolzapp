@@ -150,7 +150,7 @@
 
                 <div class="chat_main dflex">
                     <div class="current_chat">
-                        <div class="dflex spacing" v-for="singleMessage in currentChat.messages" :class="singleMessage.status === 'sent' ? 'enemy_message' : 'mine_message'">
+                        <div class="dflex spacing" v-for="singleMessage in currentChat.messages" :class="singleMessage.status === 'sent' ? 'mine_message' : 'enemy_message'">
                             <div class="text" >
                                 <p>
                                     {{singleMessage.message}}
@@ -185,41 +185,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="current_chat_my_messages" v-for="">
-                        <div class="mine_message dflex spacing">
-                            <div class="text">
-                                
-                            </div>
-                            <div class="text_info dflex">
-                                <div class="check">
-                                    <i class="fa-solid fa-gear"></i>
-                                    <ul class="secret_option">
-                                        <li>
-                                            <a href="#">
-                                                Cancella messaggio
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                Rimuovi dalla tua vita
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                "Fai come ti pare" cit.
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.check -->
-                                <div class="msg_hours">
-                                    03:40
-                                </div>
-                                <!-- /.msg_hours -->
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
                 <!-- /.chat_main -->
                 <div class="chat_footer dflex">

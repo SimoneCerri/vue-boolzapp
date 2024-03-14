@@ -5,6 +5,8 @@ createApp
     data()
     {
         return{
+            search:"",
+            filteredListName: [],
             currentMessage:"",
             currentChatMessages:[],
             currentChat: [],
@@ -352,7 +354,7 @@ createApp
     {
         openContactChat(index)
         {
-            this.currentChatMessages.splice(0,1)
+            this.currentChatMessages.splice(0, this.currentChatMessages.length)
             this.currentChat.splice(0,1)
             this.contacts[index].visible = !this.contacts[index].visible;
             //console.log(this.contacts[index].visible);
@@ -364,15 +366,40 @@ createApp
         },
         sendMessage()
         {
-            console.log(this.currentChatMessages);
+            //console.log(this.currentChatMessages);
             this.currentChatMessages.push(this.currentMessage)
-            this.currentMessage = ""
+            this.currentMessage = "";
+            //console.log(this.currentChat);
+            //this.currentChat.push(message="ok")
+            let messageOk =
+            {
+                messages:
+                [
+                    {
+                        date: '10/01/2020 15:51:00',
+                        message: 'OK!!',
+                        status: 'received'  
+                    }
+                ]
+            }
+            this.currentChat.push(messageOk)
+            console.log(this.currentChat);
+            //console.log();
+        },
+        filteredList()
+        {
+            
+            //cycle into myContact
+            return myContact.filter((object) =>
+                object.name.toLowerCase().includes(search.value.toLowerCase())
+            );
         }
     },
     mounted()
     {
         //console.log(this.contacts[0].messages[0].message);
         //console.log(this.currentChat);
+        console.log(this.filteredListName);
         
     }
 }).mount("#app");

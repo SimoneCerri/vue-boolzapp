@@ -5,6 +5,8 @@ createApp
     data()
     {
         return{
+            currentMessage:"",
+            currentChatMessages:[],
             currentChat: [],
             myContact:
             {
@@ -355,9 +357,16 @@ createApp
             //console.log(this.contacts[index].visible);
             this.currentChat.push(this.contacts[index])
             //console.log(this.contacts[index]);
-            console.log(this.currentChat);
+            //console.log(this.currentChat);
             //console.log(this.currentChat[0].name);
             //console.log(this.messagges.message);
+        },
+        sendMessage()
+        {
+            console.log(this.currentChatMessages);
+            this.currentChatMessages.push(this.currentMessage)
+            currentMessage = ""
+
         }
     },
     mounted()

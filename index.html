@@ -74,8 +74,6 @@
 
                     </div>
                 </div>
-
-
                 <!-- /.row -->
                 <div class="row all_enemy_are_the_same">
                     <div class="col" v-for="(contact,index) in contacts">
@@ -183,6 +181,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="current_chat_messages">
+                        {{currentChatMessages}}
+                    </div>
                     
                 </div>
                 <!-- /.chat_main -->
@@ -192,7 +193,7 @@
                     </div>
                     <!-- /.emote -->
                     <div class="type_here">
-                        <input class="type_msg" type="search" name="" placeholder="Scrivi un messaggio" id="">
+                        <input class="type_msg" type="search" name="" placeholder="Scrivi un messaggio" id="" v-model.trim="currentMessage" @keyup.enter="sendMessage()">
                     </div>
                     <!-- /.type_here -->
                     <div class="microphone">

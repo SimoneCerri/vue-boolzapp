@@ -352,6 +352,7 @@ createApp
     {
         openContactChat(index)
         {
+            this.currentChatMessages.splice(0,1)
             this.currentChat.splice(0,1)
             this.contacts[index].visible = !this.contacts[index].visible;
             //console.log(this.contacts[index].visible);
@@ -365,8 +366,7 @@ createApp
         {
             console.log(this.currentChatMessages);
             this.currentChatMessages.push(this.currentMessage)
-            currentMessage = ""
-
+            this.currentMessage = ""
         }
     },
     mounted()

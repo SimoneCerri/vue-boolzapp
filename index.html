@@ -67,7 +67,8 @@
                         <div class="col">
                             <nav class="search_bar">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input class="search_here" type="search" placeholder="Search someone.." v-model="search" @keyup.enter="filteredList()">
+                                <input class="search_here" type="search" placeholder="Search someone.." v-model="search"
+                                    @keyup.enter="filteredList()">
                             </nav>
                             <div v-for="name in filteredListName">
                                 {{name}}
@@ -149,15 +150,15 @@
 
                 <div class="chat_main dflex">
                     <div class="current_chat" v-for="currentObj in currentChat">
-                        <div class="dflex spacing" v-for="message in currentObj.messages">
-                            <div class="text" :class="message.status === sent ? 'enemy_message' : 'mine_message'">
+                        <div class="dflex spacing" v-for="message in currentObj.messages" :class="message.status === sent ? 'mine_message' : 'enemy_message'">
+                            <div class="text">
                                 <p>
                                     {{message.message}}
                                 </p>
                             </div>
                             <div class="text_info dflex">
                                 <div class="check">
-                                    {{message.date}}
+                                    
                                     <ul class="secret_option">
                                         <li>
                                             <a href="#">
@@ -178,7 +179,7 @@
                                 </div>
                                 <!-- /.check -->
                                 <div class="msg_hours">
-                                    00:00
+                                    {{message.date}}
                                 </div>
                                 <!-- /.msg_hours -->
                             </div>
@@ -218,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <!-- /.chat_main -->
                 <div class="chat_footer dflex">

@@ -5,6 +5,7 @@ createApp
     data()
     {
         return{
+            currentChat: [],
             myContact:
             {
                 name:"Simone",
@@ -349,12 +350,19 @@ createApp
     {
         openContactChat(index)
         {
+            this.currentChat.splice(0,1)
             this.contacts[index].visible = !this.contacts[index].visible;
-            console.log(this.contacts[index].visible);
+            //console.log(this.contacts[index].visible);
+            this.currentChat.push(this.contacts[index])
+            //console.log(this.contacts[index]);
+            //console.log(this.currentChat);
+            //console.log(this.currentChat[0].name);
         }
     },
     mounted()
     {
-
+        //console.log(this.contacts[0].messages[0].message);
+        //console.log(this.currentChat);
+        
     }
 }).mount("#app");

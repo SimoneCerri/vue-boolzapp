@@ -114,13 +114,13 @@
 
             <div class="chat col_8 col_11_m col_12_s">
                 <div class="chat_header dflex">
-                    <div class="chat_img dflex">
-                        <img src="./assets/img/avatar_1.jpg" alt="">
+                    <div class="chat_img dflex" v-for="currentObj in currentChat">
+                        <img :src="currentObj.avatar" alt="">
 
                         <div class="chat_info">
                             <h4>
                                 <strong>
-                                    Michele
+                                    {{currentObj.name}}
                                 </strong>
                             </h4>
                             <span>
@@ -145,7 +145,44 @@
                     <!-- /.chat_options -->
                 </div>
                 <!-- /.chat_header -->
-                <div class="chat_main dflex" v-for="(messages,index) in contact">
+
+                <div class="chat_main dflex">
+                    <div class="current_chat" v-for="currentObj in currentChat">
+                        <div class="enemy_message dflex" v-for="">
+                            <div class="text">
+                                <p>
+                                    {{}}
+                                </p>
+                            </div>
+                            <div class="text_info dflex">
+                                <div class="check">
+                                    <i class="fa-solid fa-gear"></i>
+                                    <ul class="secret_option">
+                                        <li>
+                                            <a href="#">
+                                                Cancella messaggio
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Rimuovi dalla tua vita
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                "Fai come ti pare" cit.
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.check -->
+                                <div class="msg_hours">
+                        
+                                </div>
+                                <!-- /.msg_hours -->
+                            </div>
+                        </div>
+                    </div>
                     <div class="mine_message dflex">
                         <div class="text">
                             <p>
@@ -190,7 +227,7 @@
                     <div class="enemy_message dflex">
                         <div class="text">
                             <p>
-                                {{messages[0].message}}
+                               prova
                             </p>
                         </div>
                         <div class="text_info dflex">
@@ -216,7 +253,7 @@
                             </div>
                             <!-- /.check -->
                             <div class="msg_hours">
-                                {{messages[0].date}}
+                                
                             </div>
                             <!-- /.msg_hours -->
                         </div>

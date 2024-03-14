@@ -181,8 +181,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="current_chat_messages">
-                        {{currentChatMessages}}
+                    <div class="current_chat_my_messages" v-for="message in currentChatMessages">
+                        <div>
+                            {{message}}
+                        </div>
                     </div>
                     
                 </div>

@@ -27,7 +27,11 @@
                             <div class="mine_contact dflex">
                                 <div class="mine_contact_img dflex align_center">
                                     <img :src="myContact.avatar" alt="">
-                                    <span>{{myContact.name}}</span>
+                                    <div class="my_name">
+                                        <strong>
+                                            {{myContact.name}}
+                                        </strong>
+                                    </div>
                                 </div>
                                 <div class="mine_contact_info">
                                     <span>
@@ -150,15 +154,16 @@
 
                 <div class="chat_main dflex">
                     <div class="current_chat">
-                        <div class="dflex spacing" v-for="singleMessage in currentChat.messages" :class="singleMessage.status === 'sent' ? 'mine_message' : 'enemy_message'">
-                            <div class="text" >
+                        <div class="dflex spacing" v-for="singleMessage in currentChat.messages"
+                            :class="singleMessage.status === 'sent' ? 'mine_message' : 'enemy_message'">
+                            <div class="text">
                                 <p>
                                     {{singleMessage.message}}
                                 </p>
                             </div>
                             <div class="text_info dflex">
                                 <div class="check">
-                                    
+
                                     <ul class="secret_option">
                                         <li>
                                             <a href="#">

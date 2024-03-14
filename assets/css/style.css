@@ -183,9 +183,17 @@ input:focus {
                 padding: 0.5em 1em;
                 height: 70px;
 
+                .my_name
+                {
+                    font-size: 1.5rem;
+                    padding-left: 1rem;
+                }
+
+
                 img {
                     border-radius: 50%;
                     max-width: 3.5em;
+                    aspect-ratio: 1;
                 }
             }
 

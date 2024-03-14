@@ -145,7 +145,7 @@
                     <!-- /.chat_options -->
                 </div>
                 <!-- /.chat_header -->
-                <div class="chat_main dflex">
+                <div class="chat_main dflex" v-for="(messages,index) in contact">
                     <div class="mine_message dflex">
                         <div class="text">
                             <p>
@@ -190,12 +190,7 @@
                     <div class="enemy_message dflex">
                         <div class="text">
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi praesentium aliquam, eum
-                                animi
-                                minus repellendus iure accusantium. Reiciendis tenetur ut nihil maiores, laborum
-                                deleniti?
-                                Sunt
-                                quidem eligendi accusamus vitae magnam.
+                                {{messages[0].message}}
                             </p>
                         </div>
                         <div class="text_info dflex">
@@ -221,7 +216,7 @@
                             </div>
                             <!-- /.check -->
                             <div class="msg_hours">
-                                03:40
+                                {{messages[0].date}}
                             </div>
                             <!-- /.msg_hours -->
                         </div>

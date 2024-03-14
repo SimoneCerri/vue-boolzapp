@@ -414,7 +414,9 @@ createApp
         //console.log(this.contacts[0].messages[0].message);
         //console.log(this.currentChat);
         //console.log(this.filteredListName);
+
         //clearInterval(this.interval)
+        
         
     },
     update()
@@ -423,9 +425,18 @@ createApp
         //console.log(this.currentChat);
         //console.log(this.contacts.messages);
         //console.log(currentChat);
-        clearInterval(this.interval)
+
+        //clearInterval(this.interval)
 
 
+    },
+    beforeUnmount()
+    {
+        //clearInterval(this.interval)
+    },
+    unmounted()
+    {
+        //clearInterval(this.interval)
     }
 }).mount("#app");
 

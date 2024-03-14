@@ -1,0 +1,508 @@
+/* #region Common */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background-image: linear-gradient(var(--zap-backgreen) 100px, var(--zap-backgrey) 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#main_app {
+    /* height: 90vh; */
+    height: 900px;
+    padding-top: 3em;
+    /* border-radius: 30px; */
+}
+
+.all_enemy_are_the_same,
+.chat_main {
+    overflow-y: scroll;
+}
+
+.enemy_list,
+.chat {
+    height: 100%;
+}
+
+/* #endregion Common */
+
+
+/* #region Debug */
+.debug #main_app {
+    background-color: palegreen;
+    height: 1000px;
+    margin-top: 3em;
+}
+
+.debug .enemy_list {
+    height: 1000px;
+    width: 500px;
+}
+
+.debug .chat {
+    height: 1000px;
+    width: 900px;
+}
+
+.debug .col {
+    background-color: palegoldenrod;
+    height: 100px;
+    width: 100%;
+}
+
+.debug .chat_header {
+    background-color: palegreen;
+    height: 100px;
+    width: 100%;
+}
+
+.debug .chat_main {
+    background-color: papayawhip;
+    height: 800px;
+    width: 100%;
+}
+
+.debug .chat_footer {
+    background-color: palegreen;
+    height: 100px;
+    width: 100%;
+}
+
+.debug .mine_message {
+    background-color: green;
+    /* height: 200px; */
+    /* width: 400px; */
+}
+
+.debug .enemy_message {
+    background-color: grey;
+    /* height: 200px; */
+    /* width: 400px; */
+}
+
+/* #endregion Debug */
+
+
+/* #region Utilities */
+
+:root {
+    --zap-backgreen: #009688FF;
+    --zap-backgrey: #dcdbd3FF;
+    --zap-notify: #8edafcFF;
+    --zap-primarygrey: #eaeaeaFF;
+    --zap-secondarygrey: #b1b1b1FF;
+    --zap-darker: #000000FF;
+    --zap-lighter: #ffffffFF;
+    --zap-mymessage: #d5f9baFF;
+}
+
+.container {
+    max-width: 1400px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.dflex {
+    display: flex;
+}
+
+.spacing {
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.col_12 {
+    width: calc((100% / 12) * 12);
+}
+
+.col_8 {
+    width: calc((100% / 12) * 8);
+}
+
+.col_6 {
+    width: calc((100% / 12) * 6);
+}
+
+.col_4 {
+    width: calc((100% / 12) * 4);
+}
+
+.col_3 {
+    width: calc((100% / 12) * 3);
+}
+
+.col_2 {
+    width: calc((100% / 12) * 2);
+}
+
+.col_1 {
+    width: calc((100% / 12) * 1);
+}
+
+/* #endregion Utilities */
+
+
+/* #region LeftApp */
+
+.enemy_list {
+    border-right: 1px solid var(--zap-secondarygrey);
+
+    .row {
+        .col {
+            .mine_contact {
+                /* position: fixed; */
+                /* width: ((100% / 12) * 4); */
+                align-items: center;
+                justify-content: space-between;
+                background-color: var(--zap-primarygrey);
+                padding: 0.5em 1em;
+                height: 70px;
+
+                img {
+                    border-radius: 50%;
+                    max-width: 3.5em;
+                }
+            }
+
+            .mine_contact_info {
+                color: var(--zap-secondarygrey);
+                font-size: 1.5em;
+
+                /* height: 70px; */
+                & i {
+                    padding: 0.5em;
+                }
+            }
+
+            .notify {
+                background-color: var(--zap-notify);
+                padding: 0.5em 1em;
+                overflow-x: inherit;
+                height: 70px;
+
+                .notify_img {
+                    font-size: 1.5em;
+                    background-color: var(--zap-lighter);
+                    border-radius: 30px;
+                    padding: 0.5em;
+                    color: var(--zap-notify);
+                    max-height: 54px;
+                    aspect-ratio: 1;
+                }
+
+                .notify_info {
+                    padding: 0.5em;
+
+                    & span {
+                        text-decoration: underline;
+                        color: rgb(83, 82, 82);
+                    }
+                }
+            }
+
+            .search_bar {
+                display: flex;
+                padding: 0.4em;
+                background-color: var(--zap-primarygrey);
+                height: 40px;
+
+                i {
+                    color: var(--zap-secondarygrey);
+                    background-color: var(--zap-lighter);
+                    padding: 0.5em;
+                }
+
+                ::placeholder {
+                    color: var(--zap-secondarygrey);
+                }
+
+                .search_here {
+                    border-style: none;
+                    /* padding: 0.5em 0; */
+                    flex-basis: 100%
+                }
+            }
+
+            .contact {
+                background-color: var(--zap-lighter);
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.5em 1em;
+                border-bottom: 1px solid var(--zap-primarygrey);
+
+                .contact_img>img {
+                    border-radius: 50%;
+                    max-width: 3.5em;
+                }
+
+                .contact_info {
+                    padding-left: 1em;
+
+                    h4 {
+                        font-size: 1.2em;
+                    }
+
+                }
+
+                span {
+                    color: var(--zap-secondarygrey);
+                }
+
+                .hours {
+                    align-self: flex-start;
+                }
+            }
+
+
+        }
+    }
+}
+
+.all_enemy_are_the_same {
+    height: calc(100% - 180px);
+}
+
+/* #endregion LeftApp */
+
+
+/* #region RightApp */
+
+.chat_header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: var(--zap-primarygrey);
+    height: 70px;
+
+    .chat_img {
+        img {
+            border-radius: 50%;
+            max-width: 3.5em;
+        }
+
+        .chat_info {
+            padding-left: 1em;
+            align-self: center;
+
+            h4 {
+                font-size: 1.2em;
+            }
+
+            span {
+                color: var(--zap-secondarygrey);
+            }
+        }
+    }
+
+    .chat_options {
+
+        span {
+            color: var(--zap-secondarygrey);
+            padding: 0.5em;
+            font-size: 1.5em;
+            /* text-align: center; */
+        }
+
+    }
+}
+
+.chat_main {
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 1em;
+    background-image: url("../img/mine.jpg");
+    background-repeat: repeat;
+    height: calc(100% - 140px);
+
+    .mine_message {
+        background-color: var(--zap-mymessage);
+        align-self: flex-end;
+        border-radius: 20px;
+        width: 60%;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+
+    .enemy_message {
+        background-color: var(--zap-lighter);
+        border-radius: 20px;
+        padding: 1em;
+        width: 60%;
+        align-self: flex-start;
+        margin-bottom: 1em;
+    }
+}
+
+.text_info {
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    .check {
+        align-self: flex-end;
+        color: var(--zap-secondarygrey);
+    }
+
+    .msg_hours {
+        color: var(--zap-secondarygrey);
+    }
+}
+
+.secret_option {
+    display: none;
+    list-style: none;
+    background-color: var(--zap-primarygrey);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    right: 50%;
+
+    li {
+        /* border: 1px solid var(--zap-secondarygrey); */
+        text-align: center;
+        padding: 0.5em 0.5em;
+        border-bottom: 1px solid var(--zap-secondarygrey);
+
+        a {
+            text-decoration: none;
+            color: rgb(138, 18, 18);
+            /* text-overflow: clip; */
+            white-space: nowrap;
+
+
+        }
+    }
+}
+
+.check:hover {
+    .secret_option {
+        display: block;
+    }
+}
+
+
+.chat_footer {
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: var(--zap-primarygrey);
+    height: 70px;
+
+    .emote,
+    .microphone {
+        font-size: 1.5em;
+        color: var(--zap-secondarygrey);
+    }
+
+    .type_here {
+        flex-basis: 80%;
+        /* border-style: none; */
+
+        ::placeholder {
+            /* height: 1em; */
+            color: var(--zap-secondarygrey);
+        }
+
+        .type_msg {
+            border-style: none;
+            padding: 1em;
+            border-radius: 10px;
+            width: 100%;
+            font-size: 1em;
+        }
+    }
+}
+
+/* #endregion RightApp */
+
+
+/* #region MediaQuery */
+
+@media screen and (max-width:991px) {
+    .container {
+        width: 100%;
+    }
+
+    .col_11_m {
+        width: 95%;
+
+    }
+
+    .col_1_m {
+        width: 5%;
+    }
+
+    body {
+        background-image: none;
+        /* height: 0; */
+        /* background: none; */
+        /* background: repeat 0; */
+        /* background-image: unset; */
+        /* margin: 0; */
+    }
+
+    #main_app {
+        /* margin: 0;
+        box-sizing: border-box; */
+        padding: 0;
+
+        .mine_contact_info,
+        .notify,
+        .notify_info,
+        .search_bar,
+        .contact_info,
+        .hours {
+            display: none;
+        }
+
+        .enemy_list {
+            max-width: 80px;
+        }
+
+    }
+
+    .all_enemy_are_the_same {
+        height: calc(100% - 70px);
+    }
+}
+
+@media screen and (max-width:540px) {
+    .enemy_list {
+        display: none;
+    }
+
+    .col_12_s {
+        width: calc((100% / 12) * 12);
+    }
+
+    .chat {
+        flex-basis: auto;
+    }
+
+    .chat_options,
+    .emote,
+    .microphone {
+        display: none;
+    }
+
+    .chat_footer {
+        display: block;
+    }
+}
+
+/* #endregion MediaQuery */

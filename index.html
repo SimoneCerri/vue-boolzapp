@@ -150,7 +150,7 @@
 
                 <div class="chat_main dflex">
                     <div class="current_chat" v-for="currentObj in currentChat">
-                        <div class="dflex spacing" v-for="singleMessage in currentObj.messages" :class="(singleMessage.status) === sent ? 'mine_message' : 'enemy_message'">
+                        <div class="dflex spacing" v-for="singleMessage in currentObj.messages" :class="singleMessage.status === sent ? 'mine_message' : 'enemy_message'">
                             <div class="text">
                                 <p>
                                     {{singleMessage.message}}

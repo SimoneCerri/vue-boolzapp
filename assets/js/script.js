@@ -33,17 +33,17 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
+                                date: this.fakeDate_1(),
                                 message: 'Hai portato a spasso il cane?',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
+                                date: this.fakeDate_2(),
                                 message: 'Ricordati di stendere i panni',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 16:15:22',
+                                date: this.fakeDate_3(),
                                 message: 'Tutto fatto!',
                                 status: 'received'
                             }
@@ -55,17 +55,17 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '20/03/2020 16:30:00',
+                                date: this.fakeDate_1(),
                                 message: 'Ciao come stai?',
                                 status: 'sent'
                             },
                             {
-                                date: '20/03/2020 16:30:55',
+                                date: this.fakeDate_2(),
                                 message: 'Bene grazie! Stasera ci vediamo?',
                                 status: 'received'
                             },
                             {
-                                date: '20/03/2020 16:35:00',
+                                date: this.fakeDate_3(),
                                 message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                                 status: 'sent'
                             }
@@ -77,17 +77,17 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '28/03/2020 10:10:40',
+                                date: this.fakeDate_1(),
                                 message: 'La Marianna va in campagna',
                                 status: 'received'
                             },
                             {
-                                date: '28/03/2020 10:20:10',
+                                date: this.fakeDate_2(),
                                 message: 'Sicuro di non aver sbagliato chat?',
                                 status: 'sent'
                             },
                             {
-                                date: '28/03/2020 16:15:22',
+                                date: this.fakeDate_3(),
                                 message: 'Ah scusa!',
                                 status: 'received'
                             }
@@ -99,12 +99,12 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
+                                date: this.fakeDate_2(),
                                 message: 'Lo sai che ha aperto una nuova pizzeria?',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
+                                date: this.fakeDate_2(),
                                 message: 'Si, ma preferirei andare al cinema',
                                 status: 'received'
                             }
@@ -116,12 +116,12 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
+                                date: this.fakeDate_1(),
                                 message: 'Ricordati di chiamare la nonna',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
+                                date: this.fakeDate_2(),
                                 message: 'Va bene, stasera la sento',
                                 status: 'received'
                             }
@@ -133,17 +133,17 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
+                                date: this.fakeDate_1(),
                                 message: 'Ciao Claudia, hai novità?',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
+                                date: this.fakeDate_2(),
                                 message: 'Non ancora',
                                 status: 'received'
                             },
                             {
-                                date: '10/01/2020 15:51:00',
+                                date: this.fakeDate_3(),
                                 message: 'Nessuna nuova, buona nuova',
                                 status: 'sent'
                             }
@@ -155,12 +155,12 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
+                                date: this.fakeDate_1(),
                                 message: 'Fai gli auguri a Martina che è il suo compleanno!',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
+                                date: this.fakeDate_2(),
                                 message: 'Grazie per avermelo ricordato, le scrivo subito!',
                                 status: 'received'
                             }
@@ -172,17 +172,17 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
+                                date: this.fakeDate_1(),
                                 message: 'Ciao, andiamo a mangiare la pizza stasera?',
                                 status: 'received'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
+                                date: this.fakeDate_2(),
                                 message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:51:00',
+                                date: this.fakeDate_3(),
                                 message: 'OK!!',
                                 status: 'received'
                             }
@@ -194,17 +194,17 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
+                                date: this.fakeDate_1(),
                                 message: 'Hai portato a spasso il cane?',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
+                                date: this.fakeDate_2(),
                                 message: 'Ricordati di stendere i panni',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 16:15:22',
+                                date: this.fakeDate_3(),
                                 message: 'Tutto fatto!',
                                 status: 'received'
                             }
@@ -216,17 +216,17 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '20/03/2020 16:30:00',
+                                date: this.fakeDate_1(),
                                 message: 'Ciao come stai?',
                                 status: 'sent'
                             },
                             {
-                                date: '20/03/2020 16:30:55',
+                                date: this.fakeDate_2(),
                                 message: 'Bene grazie! Stasera ci vediamo?',
                                 status: 'received'
                             },
                             {
-                                date: '20/03/2020 16:35:00',
+                                date: this.fakeDate_3(),
                                 message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                                 status: 'sent'
                             }
@@ -238,17 +238,17 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '28/03/2020 10:10:40',
+                                date: this.fakeDate_1(),
                                 message: 'La Marianna va in campagna',
                                 status: 'received'
                             },
                             {
-                                date: '28/03/2020 10:20:10',
+                                date: this.fakeDate_2(),
                                 message: 'Sicuro di non aver sbagliato chat?',
                                 status: 'sent'
                             },
                             {
-                                date: '28/03/2020 16:15:22',
+                                date: this.fakeDate_3(),
                                 message: 'Ah scusa!',
                                 status: 'received'
                             }
@@ -260,13 +260,18 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
-                                message: 'Lo sai che ha aperto una nuova pizzeria?',
+                                date: this.fakeDate_1(),
+                                message: 'Quindi quel giorno, lei era ubriaco ?',
+                                status: 'received'
+                            },
+                            {
+                                date: this.fakeDate_2(),
+                                message: 'Bhe ubriaco Sig. giudice... dignitosamente brillo..',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
-                                message: 'Si, ma preferirei andare al cinema',
+                                date: this.fakeDate_3(),
+                                message: 'Si spieghi meglio Sig. Biggioggero, in che senso ?',
                                 status: 'received'
                             }
                         ],
@@ -277,13 +282,13 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
-                                message: 'Ricordati di chiamare la nonna',
+                                date: this.fakeDate_1(),
+                                message: 'Luke, sono tuo padre...',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
-                                message: 'Va bene, stasera la sento',
+                                date: this.fakeDate_2(),
+                                message: 'NOOOOO !!',
                                 status: 'received'
                             }
                         ],
@@ -294,18 +299,18 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
-                                message: 'Ciao Claudia, hai novità?',
+                                date: this.fakeDate_1(),
+                                message: 'Dove si trova la principessa Leia ?',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
-                                message: 'Non ancora',
+                                date: this.fakeDate_2(),
+                                message: 'Ho un brutta notizia per te..',
                                 status: 'received'
                             },
                             {
-                                date: '10/01/2020 15:51:00',
-                                message: 'Nessuna nuova, buona nuova',
+                                date: this.fakeDate_3(),
+                                message: 'Aspetta.. COSA ?',
                                 status: 'sent'
                             }
                         ],
@@ -316,13 +321,13 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
-                                message: 'Fai gli auguri a Martina che è il suo compleanno!',
+                                date: this.fakeDate_1(),
+                                message: 'Mi garba uno sbotto il rock',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
-                                message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                                date: this.fakeDate_2(),
+                                message: 'Boia bimbo anche a te ?!?',
                                 status: 'received'
                             }
                         ],
@@ -333,18 +338,18 @@ createApp
                         visible: "",
                         messages: [
                             {
-                                date: '10/01/2020 15:30:55',
-                                message: 'Ciao, andiamo a mangiare la pizza stasera?',
+                                date: this.fakeDate_1(),
+                                message: 'Come procede la struttura per il ponte sullo stretto ?',
                                 status: 'received'
                             },
                             {
-                                date: '10/01/2020 15:50:00',
-                                message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                                date: this.fakeDate_2(),
+                                message: 'MERAVIGLIOSO ! MILLE ETTARI DI PILONI',
                                 status: 'sent'
                             },
                             {
-                                date: '10/01/2020 15:51:00',
-                                message: 'OK!!',
+                                date: this.fakeDate_3(),
+                                message: 'Ma in che senso ingegnere ?',
                                 status: 'received'
                             }
                         ],
@@ -400,7 +405,7 @@ createApp
                     status: 'received'
                 }
                 this.currentChat.messages.push(autoMessageOk);
-                console.log(autoMessageOk);
+                //console.log(autoMessageOk);
             },
             filteredList()
             {
@@ -459,9 +464,29 @@ createApp
                 let dt = DateTime.now();
                 //DateTime.now();
                 //console.log(dt.c);
-                console.log(dt.toLocaleString(DateTime.DATETIME_MED));
+                //console.log(dt.toLocaleString(DateTime.DATETIME_MED));
                 return dt.toLocaleString(DateTime.DATETIME_MED)
-            }
+            },
+            fakeDate_1()
+            {
+                let dt = DateTime.local(2024, 3, 15, 10, 30)
+                return dt.toLocaleString(DateTime.DATETIME_MED)
+            },
+            fakeDate_2()
+            {
+                let dt = DateTime.local(2024, 3, 15, 10, 34)
+                return dt.toLocaleString(DateTime.DATETIME_MED)
+            },
+            fakeDate_3()
+            {
+                let dt = DateTime.local(2024, 3, 15, 11, 50)
+                return dt.toLocaleString(DateTime.DATETIME_MED)
+            },
+            fakeDate_4()
+            {
+                let dt = DateTime.local(2024, 3, 15, 13, 0)
+                return dt.toLocaleString(DateTime.DATETIME_MED)
+            },
         },
         computed:
         {
@@ -475,6 +500,8 @@ createApp
             //clearInterval(this.interval)
             //DateTime.now();
             //console.log(DateTime.now());
+            //let prova = DateTime.local(2017, 5, 15, 8, 30)
+            //console.log(prova.toLocaleString(DateTime.DATETIME_MED));
 
         },
         update()

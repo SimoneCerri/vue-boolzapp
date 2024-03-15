@@ -474,5 +474,4 @@ createApp
         }
     }).mount("#app");
 
-var DateTime = luxon.DateTime;
 

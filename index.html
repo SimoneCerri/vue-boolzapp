@@ -29,7 +29,7 @@
                                     <img :src="myContact.avatar" alt="">
                                     <div class="my_name">
                                         <strong>
-                                            {{myContact.name}}
+                                            {{myContact.name}} 
                                         </strong>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@
                                 </strong>
                             </h4>
                             <span>
-                                Ultimo accesso oggi alle 16:26
+                                {{now}} - {{dt}}
                             </span>
                         </div>
                         <!-- /.chat_info -->
@@ -220,11 +220,12 @@
         </main>
         <!-- /#main_app -->
     </div>
-
+    
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/luxon.js"></script>
 </body>
 
 </html>

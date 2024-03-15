@@ -30,7 +30,7 @@ createApp
                     {
                         name: 'Michele',
                         avatar: './assets/img/avatar_1.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -52,7 +52,7 @@ createApp
                     {
                         name: 'Fabio',
                         avatar: './assets/img/avatar_2.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -74,7 +74,7 @@ createApp
                     {
                         name: 'Samuele',
                         avatar: './assets/img/avatar_3.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -96,7 +96,7 @@ createApp
                     {
                         name: 'Alessandro B.',
                         avatar: './assets/img/avatar_4.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_2(),
@@ -113,7 +113,7 @@ createApp
                     {
                         name: 'Alessandro L.',
                         avatar: './assets/img/avatar_5.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -130,7 +130,7 @@ createApp
                     {
                         name: 'Claudia',
                         avatar: './assets/img/avatar_6.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -152,7 +152,7 @@ createApp
                     {
                         name: 'Federico',
                         avatar: './assets/img/avatar_7.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -169,7 +169,7 @@ createApp
                     {
                         name: 'Marco',
                         avatar: './assets/img/avatar_8.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -191,7 +191,7 @@ createApp
                     {
                         name: 'Matteo',
                         avatar: './assets/img/avatar_1.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -213,7 +213,7 @@ createApp
                     {
                         name: 'Martina',
                         avatar: './assets/img/avatar_2.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -235,7 +235,7 @@ createApp
                     {
                         name: 'Franco',
                         avatar: './assets/img/avatar_3.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -257,7 +257,7 @@ createApp
                     {
                         name: 'Biggioggero',
                         avatar: './assets/img/avatar_4.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -279,7 +279,7 @@ createApp
                     {
                         name: 'Luke',
                         avatar: './assets/img/avatar_5.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -296,7 +296,7 @@ createApp
                     {
                         name: 'Ahsoka',
                         avatar: './assets/img/avatar_6.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -318,7 +318,7 @@ createApp
                     {
                         name: 'Papa Francesco',
                         avatar: './assets/img/avatar_7.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -335,7 +335,7 @@ createApp
                     {
                         name: 'Ing. Cane',
                         avatar: './assets/img/avatar_8.jpg',
-                        visible: "",
+                        visible: true,
                         messages: [
                             {
                                 date: this.fakeDate_1(),
@@ -446,7 +446,7 @@ createApp
                     else{
                         this.contacts.map(contact =>
                             {
-                                contact.visible = false
+                                contact.visible = true
                             })
                     }
 

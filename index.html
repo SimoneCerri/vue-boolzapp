@@ -75,14 +75,14 @@
                                     v-model.trim="search" @keyup="filteredList()" @keydown="filteredList()" required
                                     value="">
                             </nav>
-                            <div v-for="contact in contacts">
+                            <!-- <div v-for="contact in contacts">
                                 <div class="search_names" v-if="contact.visible === true">
                                     <strong>
 
                                         {{contact.name}}
                                     </strong>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
                         <!-- /.col -->
@@ -92,7 +92,7 @@
                 <!-- /.row -->
                 <div class="row all_enemy_are_the_same">
                     <div class="col" v-for="(contact,index) in contacts">
-                        <div class="contact dflex" @click="openContactChat(index)">
+                        <div class="contact dflex"  @click="openContactChat(index)" v-if="contact.visible">
                             <div class="contact_img dflex">
                                 <img :src="contact.avatar" alt="">
 

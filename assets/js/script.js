@@ -7,7 +7,7 @@ createApp
         return{
             /* interval:"", */
             search:"",
-            /* filteredListName: [], */
+            filteredListName: [],
             currentMessage:"",
             /* currentChatMessages:[], */
             currentChat: "",
@@ -166,7 +166,7 @@ createApp
                     ],
                 },
                 {
-                    name: 'Davide',
+                    name: 'Marco',
                     avatar: './assets/img/avatar_8.jpg',
                     visible: true,
                     messages: [
@@ -188,7 +188,7 @@ createApp
                     ],
                 },
                 {
-                    name: 'Michele',
+                    name: 'Matteo',
                     avatar: './assets/img/avatar_1.jpg',
                     visible: true,
                     messages: [
@@ -210,7 +210,7 @@ createApp
                     ],
                 },
                 {
-                    name: 'Fabio',
+                    name: 'Martina',
                     avatar: './assets/img/avatar_2.jpg',
                     visible: true,
                     messages: [
@@ -403,12 +403,18 @@ createApp
 
             /* let searchValue = this.search.toLowerCase();
             console.log(searchValue); */
-            
+            filteredListName = [];
             this.contacts.filter(singleObject =>
+            {
+                if(singleObject.name.toLowerCase().includes(this.search.toLowerCase()))
                 {
-                singleObject.name.toLowerCase().includes(this.search.toLowerCase())
-                console.log(singleObject.name.toLowerCase().includes(this.search.toLowerCase()));
-                })
+                    this.filteredListName.push(singleObject)
+                    console.log(this.filteredListName);
+                }
+
+                
+                //console.log(singleObject.name.toLowerCase().includes(this.search.toLowerCase()));
+            });
             
 
         },

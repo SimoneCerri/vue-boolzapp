@@ -74,8 +74,8 @@
                                 <input class="search_here" type="search" placeholder="Search someone.." v-model="search"
                                     @keyup.enter="filteredList()">
                             </nav>
-                            <div v-for="name in filteredListName">
-                                {{name}}
+                            <div v-for="contact in filteredListName">
+                                {{contact.name}}
                             </div>
                         </div>
                         <!-- /.col -->

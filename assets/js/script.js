@@ -7,7 +7,7 @@ createApp
         return{
             /* interval:"", */
             search:"",
-            filteredListName: "",
+            filteredListName: [],
             currentMessage:"",
             /* currentChatMessages:[], */
             currentChat: "",
@@ -403,14 +403,15 @@ createApp
 
             /* let searchValue = this.search.toLowerCase();
             console.log(searchValue); */
+
             //filteredListName = "";
             this.contacts.filter(singleObject =>
             {
                 if(singleObject.name.toLowerCase().includes(this.search.toLowerCase()))
                 {
-                    this.filteredListName = singleObject
+                    this.filteredListName.push(singleObject.name);
                     console.log(this.filteredListName);
-                    console.log(this.filteredListName.name);
+                    //console.log(this.filteredListName.name);
 
                 }
                 else

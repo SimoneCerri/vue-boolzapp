@@ -413,13 +413,17 @@ createApp
                 //filteredListName = "";
                 return this.contacts.filter(contact => {
 
+                    //console.log(this.contact.visible);
+                    
                     if(contact.name.toLowerCase().includes(this.search.toLowerCase()))
                     {
-                        this.contact.visible = true;
+                        console.log(contact);
+                        //need to do another cycle (????)
+                        //this.contact.visible = true;
                     }
                     else
                     {
-                        this.contact.visible = false;
+                        //this.contact.visible = false;
                     }
                     
                     //this.filteredListName.push(singleObject.name);

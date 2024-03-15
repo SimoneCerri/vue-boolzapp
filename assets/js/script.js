@@ -231,7 +231,7 @@ createApp
                         ],
                     },
                     {
-                        name: 'Samuele',
+                        name: 'Franco',
                         avatar: './assets/img/avatar_3.jpg',
                         visible: "",
                         messages: [
@@ -253,7 +253,7 @@ createApp
                         ],
                     },
                     {
-                        name: 'Alessandro B.',
+                        name: 'Biggioggero',
                         avatar: './assets/img/avatar_4.jpg',
                         visible: "",
                         messages: [
@@ -270,7 +270,7 @@ createApp
                         ],
                     },
                     {
-                        name: 'Alessandro L.',
+                        name: 'Luke',
                         avatar: './assets/img/avatar_5.jpg',
                         visible: "",
                         messages: [
@@ -287,7 +287,7 @@ createApp
                         ],
                     },
                     {
-                        name: 'Claudia',
+                        name: 'Ahsoka',
                         avatar: './assets/img/avatar_6.jpg',
                         visible: "",
                         messages: [
@@ -309,7 +309,7 @@ createApp
                         ],
                     },
                     {
-                        name: 'Federico',
+                        name: 'Papa Francesco',
                         avatar: './assets/img/avatar_7.jpg',
                         visible: "",
                         messages: [
@@ -326,7 +326,7 @@ createApp
                         ],
                     },
                     {
-                        name: 'Davide',
+                        name: 'Ing. Cane',
                         avatar: './assets/img/avatar_8.jpg',
                         visible: "",
                         messages: [
@@ -415,7 +415,7 @@ createApp
                     if (this.search.length > 0 && this.search !== " ") {
 
                         if (contact.name.toLowerCase().includes(this.search.toLowerCase())) {
-                            console.log(contact);
+                            //console.log(contact);
                             //need to do another cycle (????)
                             /* this.contacts.map(contact => 
                                 {
@@ -444,7 +444,7 @@ createApp
                     //console.log(this.filteredListName.name);
                     //console.log(singleObject.name.toLowerCase().includes(this.search.toLowerCase()));
                     //console.log(this.filteredList);
-                    console.log(this.contacts);
+                    //console.log(this.contacts);
                 });
             }
         },

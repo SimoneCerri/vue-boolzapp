@@ -71,14 +71,19 @@
                         <div class="col">
                             <nav class="search_bar">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input class="search_here" type="text" placeholder="Search someone.." v-model.trim="search"
-                                    @keyup="filteredList()" @keydown="filteredList()" required value="">
+                                <input class="search_here" type="text" placeholder="Search someone.."
+                                    v-model.trim="search" @keyup="filteredList()" @keydown="filteredList()" required
+                                    value="">
                             </nav>
                             <div v-for="contact in contacts">
-                                <div v-if="contact.visible === true">
-                                    {{contact.name}}
+                                <div class="search_names" v-if="contact.visible === true">
+                                    <strong>
+
+                                        {{contact.name}}
+                                    </strong>
                                 </div>
                             </div>
+
                         </div>
                         <!-- /.col -->
 

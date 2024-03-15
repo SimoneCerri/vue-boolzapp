@@ -131,6 +131,11 @@ input:focus {
     justify-content: space-between;
 }
 
+.column
+{
+    flex-direction: column;
+}
+
 .row {
     display: flex;
     flex-direction: column;
@@ -254,6 +259,12 @@ input:focus {
                     /* padding: 0.5em 0; */
                     flex-basis: 100%
                 }
+            }
+
+            .search_names
+            {
+                background-color: var(--zap-lighter);
+                padding: 0.5em 2.5em;
             }
 
             .contact {

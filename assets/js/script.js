@@ -7,9 +7,9 @@ createApp
         return{
             /* interval:"", */
             search:"",
-            filteredListName: [],
+            /* filteredListName: [], */
             currentMessage:"",
-            currentChatMessages:[],
+            /* currentChatMessages:[], */
             currentChat: "",
             myContact:
             {
@@ -395,9 +395,18 @@ createApp
         {
             
             //cycle into myContact
-            return myContact.filter((object) =>
+            /* return myContact.filter((object) =>
                 object.name.toLowerCase().includes(search.value.toLowerCase())
+            ); */
+            //cycle-filter into contacts
+            //function to see if "search" includes in "singleObject.name"
+
+            let searchValue = this.search.value;
+            
+            this.contacts.filter((...singleObject) =>
+                singleObject.name.toLowerCase().includes(this.searchValue.toLowerCase())
             );
+
         },
         autoMessage()
         {

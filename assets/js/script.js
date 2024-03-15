@@ -365,7 +365,6 @@ createApp
                 //console.log(this.currentChat);
                 //console.log(this.currentChat[0].name);
                 //console.log(this.messagges.message);
-
             },
             sendMessage() {
                 //console.log(this.currentChatMessages);
@@ -433,16 +432,9 @@ createApp
                     //this.filteredListName.push(singleObject.name);
                     //console.log(this.filteredListName);
                     //console.log(this.filteredListName.name);
-
-
-
-
                     //console.log(singleObject.name.toLowerCase().includes(this.search.toLowerCase()));
                     //console.log(this.filteredList);
                 });
-
-
-
             }
         },
         computed:
@@ -453,21 +445,14 @@ createApp
             //console.log(this.contacts[0].messages[0].message);
             //console.log(this.currentChat);
             //console.log(this.filteredListName);
-
             //clearInterval(this.interval)
-
-
         },
         update() {
             //console.log(this.currentChatMessages);
             //console.log(this.currentChat);
             //console.log(this.contacts.messages);
             //console.log(currentChat);
-
             //clearInterval(this.interval)
-
-
-
         },
         beforeUnmount() {
             //clearInterval(this.interval)

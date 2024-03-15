@@ -318,6 +318,13 @@ input:focus {
     background-color: var(--zap-primarygrey);
     height: 70px;
 
+    .till_active_chat
+    {
+        color: var(--zap-secondarygrey);
+        padding: 0.5em;
+        font-size: 1.5em;
+    }
+
     .chat_img {
         img {
             border-radius: 50%;

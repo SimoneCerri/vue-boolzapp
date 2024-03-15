@@ -127,18 +127,22 @@
 
             <div class="chat col_8 col_11_m col_12_s">
                 <div class="chat_header dflex">
+                    <span v-if="!currentChat" class="till_active_chat">
+                        [ Select a chat to view messagges.. 
+                        <i class="fa fa-arrow-circle-down" aria-hidden="true"></i> ]
+                    </span>
                     <div class="chat_img dflex">
                         <img :src="currentChat.avatar" alt="">
-
                         <div class="chat_info">
                             <h4>
                                 <strong>
                                     {{currentChat.name}}
                                 </strong>
                             </h4>
-                            <span>
-                                
+                            <span v-if="currentChat">
+                                {{dateNow()}}
                             </span>
+                            
                         </div>
                         <!-- /.chat_info -->
                     </div>

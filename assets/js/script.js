@@ -1,4 +1,6 @@
 let { createApp } = Vue;
+/* let { DateTime } = require("luxon") */
+var DateTime = luxon.DateTime;
 
 createApp
     ({
@@ -352,7 +354,8 @@ createApp
         },
         methods:
         {
-            openContactChat(index) {
+            openContactChat(index)
+            {
                 //this.currentChat = null;
                 //this.currentChatMessages.splice(0, this.currentChatMessages.length)
                 //this.currentChat.splice(0,1)
@@ -366,16 +369,17 @@ createApp
                 //console.log(this.currentChat[0].name);
                 //console.log(this.messagges.message);
             },
-            sendMessage() {
+            sendMessage()
+            {
                 //console.log(this.currentChatMessages);
                 //this.currentChatMessages.push(this.currentMessage);
                 let newMessage =
                 {
-                    date: '10/01/2020 15:51:00',
+                    date: this.dateNow(),
                     message: this.currentMessage,
                     status: 'sent'
                 }
-                console.log(newMessage);
+                //console.log(newMessage);
                 this.currentChat.messages.push(newMessage)
                 this.currentMessage = "";
                 //console.log(this.currentChat);
@@ -387,16 +391,19 @@ createApp
                 //console.log(autoMessageOk);
                 //console.log(this.currentChat);
             },
-            autoMessage() {
+            autoMessage()
+            {
                 let autoMessageOk =
                 {
-                    date: '10/01/2020 15:51:00',
+                    date: this.dateNow(),
                     message: 'Ok..',
                     status: 'received'
                 }
                 this.currentChat.messages.push(autoMessageOk);
+                console.log(autoMessageOk);
             },
-            filteredList() {
+            filteredList()
+            {
 
                 //cycle into myContact
                 /* return myContact.filter((object) =>
@@ -446,19 +453,32 @@ createApp
                     //console.log(this.filteredList);
                     //console.log(this.contacts);
                 });
+            },
+            dateNow()
+            {
+                let dt = DateTime.now();
+                //DateTime.now();
+                //console.log(dt.c);
+                console.log(dt.toLocaleString(DateTime.DATETIME_MED));
+                return dt.toLocaleString(DateTime.DATETIME_MED)
             }
         },
         computed:
         {
-
+            //too early, i fkup all, back to use methods
         },
-        mounted() {
+        mounted()
+        {
             //console.log(this.contacts[0].messages[0].message);
             //console.log(this.currentChat);
             //console.log(this.filteredListName);
             //clearInterval(this.interval)
+            //DateTime.now();
+            //console.log(DateTime.now());
+
         },
-        update() {
+        update()
+        {
             //console.log(this.currentChatMessages);
             //console.log(this.currentChat);
             //console.log(this.contacts.messages);
@@ -466,10 +486,12 @@ createApp
             //clearInterval(this.interval)
             //console.log(contacts);
         },
-        beforeUnmount() {
+        beforeUnmount()
+        {
             //clearInterval(this.interval)
         },
-        unmounted() {
+        unmounted()
+        {
             //clearInterval(this.interval)
         }
     }).mount("#app");

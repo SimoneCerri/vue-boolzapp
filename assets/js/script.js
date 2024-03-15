@@ -428,10 +428,10 @@ createApp
                     {
                         contact.visible = false;
                     }
-                    /* else if (this.search === null)
+                    else if (this.search === "")
                     {
                         contact.visible = false;
-                    } */
+                    }
                     
                     //this.filteredListName.push(singleObject.name);
                     //console.log(this.filteredListName);

@@ -304,6 +304,7 @@ input:focus {
 
 .all_enemy_are_the_same {
     height: calc(100% - 180px);
+    background-color: var(--zap-lighter);
 }
 
 /* #endregion LeftApp */

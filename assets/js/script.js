@@ -401,11 +401,15 @@ createApp
             //cycle-filter into contacts
             //function to see if "search" includes in "singleObject.name"
 
-            let searchValue = this.search.value;
+            /* let searchValue = this.search.toLowerCase();
+            console.log(searchValue); */
             
-            this.contacts.filter((...singleObject) =>
-                singleObject.name.toLowerCase().includes(this.searchValue.toLowerCase())
-            );
+            this.contacts.filter(singleObject =>
+                {
+                singleObject.name.toLowerCase().includes(this.search.toLowerCase())
+                console.log(singleObject.name.toLowerCase().includes(this.search.toLowerCase()));
+                })
+            
 
         },
         autoMessage()

@@ -396,8 +396,7 @@ createApp
                 }
                 this.currentChat.messages.push(autoMessageOk);
             },
-            filteredList()
-            {
+            filteredList() {
 
                 //cycle into myContact
                 /* return myContact.filter((object) =>
@@ -413,26 +412,33 @@ createApp
                 return this.contacts.filter(contact => {
 
                     //console.log(this.contact.visible);
-                    
-                    if(contact.name.toLowerCase().includes(this.search.toLowerCase()))
-                    {
-                        console.log(contact);
-                        //need to do another cycle (????)
-                        /* this.contacts.map(contact => 
+                    if (this.search.length > 0 && this.search !== " ") {
+
+                        if (contact.name.toLowerCase().includes(this.search.toLowerCase())) {
+                            console.log(contact);
+                            //need to do another cycle (????)
+                            /* this.contacts.map(contact => 
+                                {
+                                    contact.visible = true
+                                }) */
+                            contact.visible = true;
+                        }
+                        else if (!contact.name.toLowerCase().includes(this.search.toLowerCase())) {
+                            contact.visible = false;
+                        }
+                        /* else if (this.search === " ")
+                        {
+                            contact.visible = false;
+                        } */
+                    }
+                    else{
+                        this.contacts.map(contact =>
                             {
-                                contact.visible = true
-                            }) */
-                        contact.visible = true;
+                                contact.visible = false
+                            })
                     }
-                    else if (!contact.name.toLowerCase().includes(this.search.toLowerCase()))
-                    {
-                        contact.visible = false;
-                    }
-                    else if (this.search === "")
-                    {
-                        contact.visible = false;
-                    }
-                    
+
+
                     //this.filteredListName.push(singleObject.name);
                     //console.log(this.filteredListName);
                     //console.log(this.filteredListName.name);
@@ -444,7 +450,7 @@ createApp
         },
         computed:
         {
-            
+
         },
         mounted() {
             //console.log(this.contacts[0].messages[0].message);

@@ -385,7 +385,7 @@ createApp
             //console.log(this.currentChat);
             //this.currentChat.push(message="ok")
             
-            this.interval = setInterval(this.autoMessage,1500)
+            this.timeout = setTimeout(this.autoMessage,1500)
             //clearInterval(this.interval)
 
             //console.log(autoMessageOk);

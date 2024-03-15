@@ -419,11 +419,15 @@ createApp
                     {
                         console.log(contact);
                         //need to do another cycle (????)
-                        //this.contact.visible = true;
+                        /* this.contacts.map(contact => 
+                            {
+                                contact.visible = true
+                            }) */
+                        contact.visible = true;
                     }
                     else
                     {
-                        //this.contact.visible = false;
+                        contact.visible = false;
                     }
                     
                     //this.filteredListName.push(singleObject.name);

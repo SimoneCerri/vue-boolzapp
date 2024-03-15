@@ -5,6 +5,7 @@ createApp
     data()
     {
         return{
+            /* interval:"", */
             search:"",
             filteredListName: [],
             currentMessage:"",
@@ -427,6 +428,7 @@ createApp
         //console.log(currentChat);
 
         //clearInterval(this.interval)
+        
 
 
     },

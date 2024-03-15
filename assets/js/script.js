@@ -424,16 +424,21 @@ createApp
                             }) */
                         contact.visible = true;
                     }
-                    else
+                    else if (!contact.name.toLowerCase().includes(this.search.toLowerCase()))
                     {
                         contact.visible = false;
                     }
+                    /* else if (this.search === null)
+                    {
+                        contact.visible = false;
+                    } */
                     
                     //this.filteredListName.push(singleObject.name);
                     //console.log(this.filteredListName);
                     //console.log(this.filteredListName.name);
                     //console.log(singleObject.name.toLowerCase().includes(this.search.toLowerCase()));
                     //console.log(this.filteredList);
+                    console.log(this.contacts);
                 });
             }
         },
@@ -453,6 +458,7 @@ createApp
             //console.log(this.contacts.messages);
             //console.log(currentChat);
             //clearInterval(this.interval)
+            //console.log(contacts);
         },
         beforeUnmount() {
             //clearInterval(this.interval)

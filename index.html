@@ -71,12 +71,9 @@
                         <div class="col">
                             <nav class="search_bar">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input class="search_here" type="search" placeholder="Search someone.." v-model="search"
-                                    @keyup="filteredList()">
-
-
+                                <input class="search_here" type="text" placeholder="Search someone.." v-model="search">
                             </nav>
-                            <div v-for="contact in filteredListName">
+                            <div v-for="contact in filteredList">
                                 {{contact}}
                             </div>
                         </div>

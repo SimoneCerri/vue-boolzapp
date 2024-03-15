@@ -71,10 +71,13 @@
                         <div class="col">
                             <nav class="search_bar">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input class="search_here" type="text" placeholder="Search someone.." v-model="search">
+                                <input class="search_here" type="text" placeholder="Search someone.." v-model="search"
+                                    @keyup="filteredList()">
                             </nav>
-                            <div v-for="contact in filteredList">
-                                {{contact}}
+                            <div v-for="contact in contacts">
+                                <div v-if="contact.visible === true">
+                                    {{contact.name}}
+                                </div>
                             </div>
                         </div>
                         <!-- /.col -->
@@ -120,7 +123,7 @@
             <div class="chat col_8 col_11_m col_12_s">
                 <div class="chat_header dflex">
                     <div class="chat_img dflex">
-                        <img v-if="" :src="currentChat.avatar" alt="">
+                        <img :src="currentChat.avatar" alt="">
 
                         <div class="chat_info">
                             <h4>

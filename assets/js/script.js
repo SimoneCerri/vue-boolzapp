@@ -14,7 +14,7 @@ createApp
                 {
                     name: "Simone",
                     avatar: "./assets/img/avatar_io.jpg",
-                    visible: true,
+                    visible: "",
                     messages:
                         [
                             {
@@ -28,7 +28,7 @@ createApp
                     {
                         name: 'Michele',
                         avatar: './assets/img/avatar_1.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -50,7 +50,7 @@ createApp
                     {
                         name: 'Fabio',
                         avatar: './assets/img/avatar_2.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '20/03/2020 16:30:00',
@@ -72,7 +72,7 @@ createApp
                     {
                         name: 'Samuele',
                         avatar: './assets/img/avatar_3.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '28/03/2020 10:10:40',
@@ -94,7 +94,7 @@ createApp
                     {
                         name: 'Alessandro B.',
                         avatar: './assets/img/avatar_4.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -111,7 +111,7 @@ createApp
                     {
                         name: 'Alessandro L.',
                         avatar: './assets/img/avatar_5.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -128,7 +128,7 @@ createApp
                     {
                         name: 'Claudia',
                         avatar: './assets/img/avatar_6.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -150,7 +150,7 @@ createApp
                     {
                         name: 'Federico',
                         avatar: './assets/img/avatar_7.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -167,7 +167,7 @@ createApp
                     {
                         name: 'Marco',
                         avatar: './assets/img/avatar_8.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -189,7 +189,7 @@ createApp
                     {
                         name: 'Matteo',
                         avatar: './assets/img/avatar_1.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -211,7 +211,7 @@ createApp
                     {
                         name: 'Martina',
                         avatar: './assets/img/avatar_2.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '20/03/2020 16:30:00',
@@ -233,7 +233,7 @@ createApp
                     {
                         name: 'Samuele',
                         avatar: './assets/img/avatar_3.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '28/03/2020 10:10:40',
@@ -255,7 +255,7 @@ createApp
                     {
                         name: 'Alessandro B.',
                         avatar: './assets/img/avatar_4.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -272,7 +272,7 @@ createApp
                     {
                         name: 'Alessandro L.',
                         avatar: './assets/img/avatar_5.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -289,7 +289,7 @@ createApp
                     {
                         name: 'Claudia',
                         avatar: './assets/img/avatar_6.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -311,7 +311,7 @@ createApp
                     {
                         name: 'Federico',
                         avatar: './assets/img/avatar_7.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -328,7 +328,7 @@ createApp
                     {
                         name: 'Davide',
                         avatar: './assets/img/avatar_8.jpg',
-                        visible: true,
+                        visible: "",
                         messages: [
                             {
                                 date: '10/01/2020 15:30:55',
@@ -396,11 +396,9 @@ createApp
                     status: 'received'
                 }
                 this.currentChat.messages.push(autoMessageOk);
-            }
-        },
-        computed:
-        {
-            filteredList() {
+            },
+            filteredList()
+            {
 
                 //cycle into myContact
                 /* return myContact.filter((object) =>
@@ -414,7 +412,16 @@ createApp
 
                 //filteredListName = "";
                 return this.contacts.filter(contact => {
-                    contact.name.toLowerCase().includes(this.search.toLowerCase())
+
+                    if(contact.name.toLowerCase().includes(this.search.toLowerCase()))
+                    {
+                        this.contact.visible = true;
+                    }
+                    else
+                    {
+                        this.contact.visible = false;
+                    }
+                    
                     //this.filteredListName.push(singleObject.name);
                     //console.log(this.filteredListName);
                     //console.log(this.filteredListName.name);
@@ -423,12 +430,16 @@ createApp
 
 
                     //console.log(singleObject.name.toLowerCase().includes(this.search.toLowerCase()));
+                    //console.log(this.filteredList);
                 });
 
-                
 
 
             }
+        },
+        computed:
+        {
+            
         },
         mounted() {
             //console.log(this.contacts[0].messages[0].message);
